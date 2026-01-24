@@ -10,10 +10,15 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, rgba(42, 123, 155, 0.7) 0%, rgba(87, 199, 133, 0.7) 100%);
+    background: linear-gradient(
+        90deg,
+        hsla(197, 85%, 55%, 0.6),
+        hsla(152, 85%, 55%, 0.6)
+    );
     pointer-events: none;
     z-index: 400;
 }
+
 
 .grayscale-tiles {
     filter: grayscale(100%);

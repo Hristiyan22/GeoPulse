@@ -103,17 +103,11 @@ $(document).ready(function () {
       .catch((err) => console.error("Грешка:", err));
   }
 
-  $("#searchForm").submit(function (e) {
+  $("#searchForm, #searchButton").on("submit click", function (e) {
     e.preventDefault();
-    const query = input.val().trim();
-    if (query) {
-      searchAddress(query);
-    }
-  });
 
-  $("#searchButton").click(function (e) {
-    e.preventDefault();
     const query = input.val().trim();
+
     if (query) {
       searchAddress(query);
     }
