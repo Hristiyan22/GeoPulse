@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Търсене на адреси</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <div class="container">
+        <h1>Търсене на адреси</h1>
+        <form id="searchForm">
+            <input type="text" id="addressInput" placeholder="Въведете адрес..." autocomplete="off" />
+            <button id="searchButton"><img src="./images/search.png" alt="Търсене"></button>
+        </form>
+
+        <ul id="suggestions"></ul>
+        <ul id="results"></ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="index.js"></script>
+    
+</body>
+
+</html>

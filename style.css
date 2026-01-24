@@ -1,0 +1,134 @@
+#map {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    
+}
+
+#map::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 0.7) 0%, rgba(87, 199, 133, 0.7) 100%);
+    pointer-events: none;
+    z-index: 400;
+}
+
+.grayscale-tiles {
+    filter: grayscale(100%);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 50px;
+}
+
+.container {
+    margin: auto;
+    max-width: 600px;
+    padding: 20px;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    height: 40px;
+}
+
+input {
+    flex-grow: 2;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+}
+
+button, img {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    height: 40px;
+}
+
+.leaflet-control-zoom {
+    border: none !important;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.leaflet-control-zoom a {
+    border-radius: 100% !important;
+    margin: 5px ;
+}
+
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+    
+}
+
+.suggestion-item:hover {
+    background-color: #f8fafc;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#resultsSection {
+    animation: fadeIn 0.4s ease-out;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: #f0f0f0;
+}
+
+#suggestions li {
+    background-color: #fafafa;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+    }
+}
