@@ -1,4 +1,4 @@
-# Address-Hunter
+# GeoPulse
 A web application for searching addresses with an interactive map, designed for users in Bulgaria.
 
 ### Features
