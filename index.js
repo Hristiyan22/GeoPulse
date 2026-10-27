@@ -70,7 +70,7 @@ $(document).ready(function () {
         const candidates = data.candidates || [];
 
         if (candidates.length === 0) {
-          resultsList.html("<li>Няма намерени резултати</li>");
+          resultsList.text("<li>Няма намерени резултати</li>");
           return;
         }
 
